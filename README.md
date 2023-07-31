@@ -1,27 +1,21 @@
-# React + TypeScript + Vite
+# CONTACT
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Essa é uma aplicação CONTACT API com objetivo de facilitar a gestão de seus contatos.
 
-Currently, two official plugins are available:
+OBS: DEVE SER UTILIZADA EM CONJUNTO COM A API LOCAL CONTATAC API: https://github.com/carolinalmeidas/desafio-fullstack-tech-api
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+UTILIZAR PROJETO LOCALMENTE:
+Clonar o repositório em sua maquina.
+Instar todas as dependências do projeto: COMANDO npm install
+Rodas aplicação: npm run dev
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Na aplicação você pode realizar:
+   1) CADASTRO DE USUÁRIO
+   2) LOGIN
+   3) EDITAR USUÁRIO E EXCLUIR
+   4) CADASTRAR, EDITAR E EXLUIR CONTATOS
+   5) NA PAGINA DASHBOAR VOCÊ TEM O RELATÓRIO DE TODOS CONTATOS CADASTRADOS
+##
+![LoginPage](https://github.com/carolinalmeidas/desafio-fullstack-tech/assets/110141554/5717344d-2f97-4575-ba9a-adddc9d9fd07)
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list

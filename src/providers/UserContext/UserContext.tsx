@@ -41,7 +41,7 @@ export const UserProvider = ({ children }: IDefaultProvideProps) => {
       setUser(response.data.user);
       localStorage.setItem("@TOKEN", response.data.token);
       toast.success("Cadastro realizado com sucesso!");
-      navigate('/dashboard');
+      navigate('/');
     } catch (error) {
       navigate('/register')
       toast.error("Algo deu errado!!");
@@ -129,7 +129,7 @@ export const UserProvider = ({ children }: IDefaultProvideProps) => {
   };
   return (
     <>
-    <UserContext.Provider value={{ userLogin, loading, user, renderUser, userLogout, userRegister, idUser, editeUser, modalUser, toggleModalUser, deleteUser}}>
+    <UserContext.Provider value={{ userLogin, loading, user, renderUser, userLogout, userRegister, idUser, editeUser, modalUser, toggleModalUser, deleteUser, navigate, setUser}}>
       {children}
     </UserContext.Provider>
     </>

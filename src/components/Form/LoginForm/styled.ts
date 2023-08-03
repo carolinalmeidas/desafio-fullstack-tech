@@ -25,4 +25,5 @@ export const StyledLogin = styled.main`
         gap: 20px;  
     }
 
+
 `

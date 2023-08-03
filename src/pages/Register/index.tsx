@@ -19,7 +19,7 @@ export const Register = () => {
         formState: {errors},
       } = useForm<LoginDataRegister>({resolver: zodResolver(schema)});
 
-    const {userRegister} = useContext(UserContext)
+    const {userRegister, navigate} = useContext(UserContext)
 
     const submit: SubmitHandler<LoginDataRegister> = (data) => {
         console.log(data)
@@ -28,7 +28,11 @@ export const Register = () => {
     return(
         <>
         <StyledRegister>
-            <h2>Faça seu Cadastro</h2>
+            <div>
+                <h2>Faça seu Cadastro</h2>
+                <button onClick={() => {navigate('/');}}>Login</button>
+            </div>
+            
             <form onSubmit={handleSubmit(submit)}>
                 <Input label="Digite seu nome:" id="name" type="name" register={register("name")} error={errors.name}/>
 
@@ -40,6 +44,7 @@ export const Register = () => {
 
                 <Button  name={"Cadastrar"}  />
             </form>
+            
         </StyledRegister>
         <ToastContainer
             position="top-right"

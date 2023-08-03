@@ -11,6 +11,7 @@ import { schema } from "./validations";
 import { ButtonClose, ButtonModal } from "../../Buttons";
 
 import { Modal } from "../../Modal";
+import { UserContext } from "../../../providers/UserContext/UserContext";
 
 interface ModalCreateProps{
     toggleModalRegister: () => void
@@ -25,7 +26,6 @@ export const RegisterContact = ({toggleModalRegister}: ModalCreateProps) => {
       } = useForm<ContactData>({resolver: zodResolver(schema)});
 
     const {createContact} = useContext(ContactContext)
-   
     
     const registerContact = async(data:ContactData) => {
         createContact(data);

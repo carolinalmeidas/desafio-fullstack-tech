@@ -1,3 +1,5 @@
+import { NavigateFunction } from "react-router-dom";
+
 export interface IDefaultProvideProps{
     children: React.ReactNode;
 }
@@ -35,7 +37,9 @@ export interface IUserContextProvider{
    editeUser: (data: IUserEdit, id: number) => Promise<void>,
    modalUser: boolean,
    toggleModalUser: () => void,
-   deleteUser: (id: number) => Promise<void>
+   deleteUser: (id: number) => Promise<void>,
+   navigate: NavigateFunction,
+   setUser: React.Dispatch<React.SetStateAction<IUserResponse | undefined>>
 }
 
 export interface LoginResponse {

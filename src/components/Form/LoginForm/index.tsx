@@ -15,7 +15,7 @@ export const LoginForm = () => {
       formState: { errors },
     } = useForm<LoginData>({resolver: zodResolver(schema)});
   
-    const { userLogin } = useContext(UserContext);
+    const { userLogin, navigate } = useContext(UserContext);
     
     const submit: SubmitHandler<LoginData> = (data) => {
         userLogin(data);
@@ -40,6 +40,7 @@ export const LoginForm = () => {
         />
         <Button  name={"Entrar"}  />
       </form>
+      <button onClick={() => {navigate('/register');}}>Cadastrar</button>
       </StyledLogin>
     );
   };

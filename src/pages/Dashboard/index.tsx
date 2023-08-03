@@ -12,8 +12,8 @@ import { EditFormUser } from "../../components/Form/EditFormUser"
 export const Dashboard = () => {
 
     const {modal, toggleModal, modalRegister, toggleModalRegister} = useContext(ContactContext)
-    const { modalUser, toggleModalUser, renderUser, user} = useContext(UserContext)
- 
+    const { modalUser, toggleModalUser, renderUser} = useContext(UserContext)
+
     useEffect(() => {
         renderUser()
     },[renderUser])
@@ -22,7 +22,7 @@ export const Dashboard = () => {
         <>
         <Header />
         <StyledDashboard> 
-            <h1>Veja seus contatos, {user.name} </h1>
+            <h1>Veja seus contatos</h1>
         <Cards />
         {
             modal && <EditForm toggleModal={toggleModal} />
